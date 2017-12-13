@@ -31,7 +31,9 @@
 			<h2>Basic Exercises</h2>
 			<h3>Exercise 1 Library List </h3>
 			<ul id="readinglist"></ul>
-			<h3>Exercise 2 Create a Table </h3>
+			<h3>Exercise 2 Truncate a string</h3>
+			<p id="truncate"></p>
+			<h3>Exercise 3 Create a Table </h3>
 			<input type="submit" id="crtbl">
 			<div id="createtable"></div>
 		</article>
@@ -41,22 +43,17 @@
 		
 		var msg = new String("");
 
-		// var table;
+		var string = new String ("I am a hero from World of Warcraft");
 
 		msg = output (library);
-
-		// table = createtable(2,6);
-
-		/*var element = document.getElementById("readinglist");
-
-		element.innerHTML = msg;*/
 
 		document.getElementById("readinglist").innerHTML = msg;
 
 		document.getElementById("crtbl").addEventListener("click", inputcrtbl, false);
 
-		// document.getElementById("createtable").innerHTML = table;
+		truncstring (string, 12);
 
+		// functions below:
 
 		function output (library) {
 
@@ -114,6 +111,10 @@
 			return table;
 		}
 
+		function truncstring (string, position) {
+
+			document.getElementById("truncate").innerHTML = "From the string: &quot;" + string + "&quot; we cut at position " + position + " to get: &quot;" + string.substring(0,position-1)+"&quot;.";
+		}
 	</script>
 </body>
 </html>
