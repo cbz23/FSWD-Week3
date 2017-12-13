@@ -26,6 +26,33 @@
 		</ul>
 	</nav>
 	</header><!-- /header -->
+	<main>
+		<article>
+			<h2>Basic Exercises</h2>
+			<h3>Basic Exercise 1 Temperature</h3>
+			<p id="randomtemp"></p>
+			<h3>Basic Exercise 2 Highest value in an array</h3>
+			<h3>Basic Exercise 3 Product</h3>
+			<h3>Basic Exercise 4 Upper Case</h3>
+		</article>
+	</main>
+	<script>
+		temperature ();
 
+		function temperature ()
+		{
+			var temperature = Math.floor((Math.random() * 30) - 5);
+			
+			if (temperature >= -5 && temperature < 10)
+			{
+				document.getElementById("randomtemp").innerHTML = "The Temperature is "+ temperature + ". The weather is cold.";
+			}	
+			else if (temperature > 11)
+			{
+				document.getElementById("randomtemp").innerHTML = "The Temperature is "+ temperature + ". The weather is moderate.";
+			}	
+			
+		}
+	</script>
 </body>
 </html>

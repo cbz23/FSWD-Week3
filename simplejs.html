@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>damn</h1>
+	<ul id="some"></ul>
+	<script type="text/javascript">
+		var library = [{ title: 'When Breath Becomes Air', author: 'Paul Kalanithi', readingStatus: true }, { title: 'The Girls', author: 'Emma Cline ', readingStatus: true }, { title: 'The Nest', author: 'Cynthia', readingStatus: false }, { title: 'The Crown', author: 'Kiera Cass', readingStatus: true }, { title: 'Behind Closed Doors', author: 'B.A. Paris', readingStatus: false }, { title: 'It Ends with Us ', author: 'Colleen Hoover', readingStatus: true }];
+		
+		var msg = new String("");
+
+		var element = document.getElementById("some");
+		msg = output (library);
+
+
+		document.write (msg);
+		document.write (element);
+
+		function output (library) {
+
+			var liopen = "<li>"
+			var liclose = "</li>"
+
+			for (i=0; i<library.length; i++)
+			{
+
+				if (library[i].readingStatus==true) {
+					/*msg += liopen + "i ist " + i + " und " + library[i].readingStatus + " ist offensichtlich true..."+liclose;*/
+					msg += liopen + "Already read <em>" + library[i].title + "</em> from " + library[i].author+ "." + liclose;
+				} else {
+					msg += liopen + "You still have to read <em>" + library[i].title + "</em> from " + library[i].author+ "." + liclose;
+				}
+				/*document.write ("loop"+i);
+				document.write (msg);
+				document.write ("<br>");*/
+			}
+		
+			return msg;
+		}
+	</script>
+</body>
+</html>
